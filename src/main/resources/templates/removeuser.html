@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Remove User</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    .container {
+        width: 100%;
+        max-width: 600px;
+        padding: 20px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+        text-align: center;
+    }
+    form {
+        background-color: #ffffff;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 300px;
+    }
+    label {
+        display: block;
+        margin-bottom: 10px;
+    }
+    input[type="email"] {
+        padding: 8px;
+        width: 100%;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        font-size: 14px;
+    }
+    .button-group {
+        margin-top: 20px;
+        width: 100%;
+    }
+    button {
+        background-color: blue;
+        color: black;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        border-radius: 5px;
+        font-size: 16px;
+        width: 100%; 
+        box-sizing: border-box;
+        text-align: center; 
+        box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+    }
+    button:hover {
+        background-color: white;
+    }
+    .back-button {
+        display: inline-block;
+        background-color: blue;
+        color: black;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        border-radius: 5px;
+        font-size: 16px;
+        width: 30%; 
+        box-sizing: border-box; 
+        text-decoration: none;
+        text-align: center; 
+        margin-top:25px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+    }
+    .back-button:hover {
+        background-color: white;
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+        <form action="rmv-user" method="post">
+            <label>Enter email of user to be removed:</label>
+            <input type="email" name="email">
+            <div class="button-group">
+                <button type="submit">Remove</button>
+            </div>
+        </form>
+        <a href="map-backadmin" class="back-button">Back</a>
+    </div>
+</body>
+</html>

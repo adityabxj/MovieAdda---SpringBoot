@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="ISO-8859-1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HomePage for Admin</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      .container {
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+        text-align: center;
+        width: 80%;
+        max-width: 400px;
+      }
+      h2 {
+        color: red;
+        margin-bottom: 20px;
+      }
+      a {
+        text-decoration: none;
+      }
+      input[type="submit"] {
+        background-color: blue;
+        color: black;
+        border: none;
+        padding: 10px 20px;
+        margin: 10px 0;
+        cursor: pointer;
+        border-radius: 5px;
+        font-size: 16px;
+        width: 60%;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+      }
+      input[type="submit"]:hover {
+        background-color: white;
+      }
+      @media (max-width: 600px) {
+        .container {
+          width: 90%;
+          padding: 20px;
+        }
+        h2 {
+          font-size: 18px;
+        }
+        input[type="submit"] {
+          font-size: 14px;
+          padding: 8px 16px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Welcome Admin</h2>
+      <a href="map-viewuser"><input type="submit" value="View Users"></a>
+      <a href="map-rmvuser"><input type="submit" value="Remove User"></a>
+      <a href="map-addmovie"><input type="submit" value="Add Movie"></a>
+      <a href="map-rmvmovie"><input type="submit" value="Remove Movies"></a>
+      <a href="map-viewmovie"><input type="submit" value="View Movies"></a>
+      <a href="map-logout"><input type="submit" value="Logout"></a>
+    </div>
+  </body>
+</html>

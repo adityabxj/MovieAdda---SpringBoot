@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Logout</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    .button-container {
+        text-align: center;
+    }
+    h3 {
+        text-align: center;
+        color: #333;
+        margin-bottom: 20px;
+    }
+    a {
+        text-decoration: none;
+        margin: 0 10px;
+    }
+    input[type="submit"] {
+        background-color: blue;
+        color: black;
+        border: none;
+        padding: 15px 30px;
+        cursor: pointer;
+        border-radius: 5px;
+        font-size: 16px;
+        margin: 5px; 
+    }
+    input[type="submit"]:hover {
+        background-color: white;
+    }
+</style>
+</head>
+<body>
+    <h3>Are you sure you want to logout?</h3>
+    <div class="button-container">
+        <a href="map-yes"><input type="submit" value="Yes"></a>
+    </div>
+    <div class="button-container">
+        <a href="map-no"><input type="submit" value="No"></a>
+    </div>
+</body>
+</html>

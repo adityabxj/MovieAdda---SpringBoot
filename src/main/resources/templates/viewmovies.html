@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>View Movies</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  table, th, td {
+    border: 1px solid #ddd;
+  }
+  th, td {
+    padding: 8px;
+    text-align: left;
+  }
+  th {
+    background-color: #f2f2f2;
+  }
+  tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  .video-container {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 35%; 
+    margin-bottom: 10px;
+    background-color: #000;
+    overflow: hidden;
+  }
+  .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+  }
+  input[type="submit"] {
+    background-color: blue;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    text-decoration: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+  }
+  input[type="submit"]:hover {
+    background-color: white;
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <a href="map-backadmin"><input type="submit" value="Back"></a>
+  </div>
+  <table border="1">
+    <tr>
+      <td>Name</td>
+      <td>Video</td>
+      <td>Genre</td>
+      <td>Cast</td>
+      <td>Director</td>
+    </tr>
+    <tr th:each="movie : ${movies}">
+      <td th:text="${movie.name}"></td>
+      <td class="video-container">
+        <iframe th:src="${movie.link}" frameborder="0"></iframe>
+      </td>
+      <td th:text="${movie.genre}"></td>
+      <td th:text="${movie.cast}"></td>
+      <td th:text="${movie.director}"></td>
+    </tr>
+  </table>
+</body>
+</html>

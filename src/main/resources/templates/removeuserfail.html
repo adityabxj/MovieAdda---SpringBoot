@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Remove Fail</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    .container {
+        background-color: #ffffff;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+    h1 {
+        color: #333;
+        margin-bottom: 10px;
+    }
+    h3 {
+        color: #555;
+        margin-bottom: 20px;
+    }
+    .button-group {
+        display: flex;
+        justify-content: space-between;
+    }
+    .button-group a {
+        flex: 1;
+        margin: 5px;
+    }
+    .button-group a input[type="submit"] {
+        width: 100%;
+        box-sizing: border-box;
+        background-color: blue;
+        color: black;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        border-radius: 5px;
+        font-size: 16px;
+        text-decoration: none; 
+        box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+    }
+    .button-group a input[type="submit"]:hover {
+        background-color: white;
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+        <h1>User Remove Failed</h1>
+        <h3>User does not exist to be deleted</h3>
+        <div class="button-group">
+            <a href="map-rmvuser"><input type="submit" value="Remove User"></a>
+            <a href="map-backadmin"><input type="submit" value="Back"></a>
+        </div>
+    </div>
+</body>
+</html>

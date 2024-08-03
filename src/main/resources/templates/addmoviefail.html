@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Add Movie Fail</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    .container {
+        background-color: #ffffff;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+    h3 {
+        color: #333;
+        margin-bottom: 20px;
+    }
+    .button-container {
+        display: flex;
+        justify-content: center;
+        gap: 20px; 
+    }
+    input[type="submit"] {
+        background-color: blue;
+        color: black;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        border-radius: 5px;
+        font-size: 16px;
+        width: 150px; 
+        box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+    }
+    input[type="submit"]:hover {
+        background-color: white;
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+        <h3>Add Movie Fail - Movie Already Exists</h3>
+        <br>
+        <div class="button-container">
+            <a href="map-addmovie"><input type="submit" value="Add Movie"></a>
+            <a href="map-backadmin"><input type="submit" value="Back"></a>
+        </div>
+    </div>
+</body>
+</html>

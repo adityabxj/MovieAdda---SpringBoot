@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Movie Adda</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      height: 100%;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    main {
+      flex: 1;
+    }
+
+    header {
+      background-color: #333;
+      color: white;
+      padding: 1rem 0;
+      width: 100%;
+      max-width: 1200px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
+      background-color: #333;
+      color: white;
+      height: 80px; 
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: red;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .nav-links li {
+      display: inline;
+    }
+
+    a{
+      box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+      border-radius: 5px;
+    }
+
+    .nav-links a {
+      color: white;
+      padding: 0.5rem 2rem;
+      transition: background 0.3s;
+    }
+
+    .nav-links a:hover {
+      background: #555;
+    }
+
+    .auth-buttons {
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    .auth-buttons .btn {
+      background-color: blue;
+      color: black;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+
+    input{
+      background-color: blue;
+      border: none;
+    }
+
+    .auth-buttons .btn:hover {
+      background:white;
+    }
+
+    input:hover{
+      background: white;
+    }
+
+    .hero {
+      background: url('https://wallpaperbat.com/img/95493-the-witcher-netflix-wallpaper-and-background-download-hd.jpg') no-repeat center center/cover;
+      color: white;
+      text-align: center;
+      padding: 5rem 1rem;
+      height: 80vh;
+    }
+
+    .hero-content {
+      max-width: 600px;
+      margin: 0 auto;
+      color:black;
+      font-weight: bold;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.25rem;
+      margin-bottom: 2rem;
+    }
+
+    .hero-btn {
+      background: #ff6347;
+      color: white;
+      padding: 0.75rem 2rem;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+
+    .hero-btn:hover {
+      background: #ff4500;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      padding: 1rem 0;
+      text-align: center;
+      position: relative;
+      width: 100%;
+    }
+
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+
+    .footer-content p {
+      margin: 0.5rem 0;
+    }
+
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    .social-links a {
+      color: white;
+      padding: 0.5rem;
+      border-radius: 50%;
+      background: #555;
+      transition: background 0.3s;
+    }
+
+    .social-links a:hover {
+      background: #777;
+    }
+
+    .about {
+      padding: 2rem 1rem;
+      background-color: #ffffff;
+      text-align: left;
+      max-width: 80%;
+      margin: 2rem auto;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      height: 80vh;
+      margin-top: 10%;
+    }
+    
+    .about h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: red;
+      text-align: center;
+    }
+    
+    .about p {
+      font-size: 0.9rem;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+      color: #555555;
+      text-align: center;
+      font-weight: 300;
+    }
+    
+    .about p:last-child {
+      margin-bottom: 0;
+    }
+
+    .contact {
+      padding: 2rem 1rem;
+      text-align: center;
+      background-color: #f9f9f9;
+      height: 60vh;
+    }
+    
+    .contact h2 {
+      font-size: 2rem;
+      margin-bottom: 4rem;
+      color: red;
+    }
+    
+    .contact p {
+      font-size: 1.125rem;
+      margin-bottom: 2rem;
+      max-width: 800px;
+      margin: 0 auto;
+      align-items: center;
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">Movie Adda</div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="auth-buttons">
+        <a href="map-register" class="btn"><input type="submit" value="Sign Up" /></a>
+        <a href="map-login" class="btn"><input type="submit" value="Login" /></a>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <h1>Welcome to Movie Adda</h1>
+        <p>Your ultimate movie streaming platform.</p>
+        <a href="map-exploremovies" class="btn hero-btn">Explore Movies</a>
+      </div>
+    </section>
+    <section id="about" class="about">
+      <h2>About Us</h2>
+      <p>Welcome to Movie Adda, your ultimate destination for streaming the finest collection of movies from around the globe. At Movie Adda, we believe in the power of storytelling and the magic of cinema. Our platform is designed to cater to movie enthusiasts of all tastes and preferences, offering a diverse range of genres that include action, drama, comedy, horror, romance, and much more. Our extensive library is continually updated with the latest releases as well as timeless classics, ensuring that there's always something new and exciting for you to discover.
+      </p>
+      <p>
+        At Movie Adda, we are committed to providing a seamless and immersive viewing experience. Our user-friendly interface and intuitive navigation make it easy for you to find and enjoy your favorite movies. Whether you're in the mood for a heartwarming drama, a thrilling action-packed adventure, or a laugh-out-loud comedy, Movie Adda has got you covered. Our high-definition streaming and adaptive bitrate technology ensure that you enjoy the best possible viewing quality, no matter what device you're using.
+      </p>  
+      <p>
+        We understand that every movie fan has unique preferences, which is why we offer personalized recommendations based on your viewing history and ratings. Our goal is to help you discover new favorites and hidden gems that you might have otherwise missed. Movie Adda also provides a platform for you to rate and review movies, share your thoughts with other movie lovers, and participate in lively discussions within our community.
+      </p>
+      <p>
+        Join Movie Adda today and become part of a vibrant community of movie enthusiasts. Enjoy unlimited access to a vast collection of movies, participate in discussions, and stay updated with the latest in the world of film. At Movie Adda, we're not just about streaming movies; we're about celebrating the art of filmmaking and sharing our passion for cinema with you.
+      </p>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2>Contact Us</h2>
+      <p>If you have any questions or need support, feel free to reach out to us via email at support@movieadda.com or call us at (123) 456-7890.</p>
+    </section>
+  </main>
+    <footer>
+      <div class="footer-content">
+        <p>&copy; 2024 Movie Adda. All rights reserved.</p>
+        <ul class="social-links">
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Twitter</a></li>
+          <li><a href="#">Instagram</a></li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>
