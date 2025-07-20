@@ -29,15 +29,6 @@
 
 ---
 
-## 📂 Modules Overview
-
-- **User Module**: Handles registration, login, and role-based access control.
-- **Subscription Module**: Tracks and manages user subscriptions.
-- **Movie Module**: Lists and streams movie content for subscribed users.
-- **Payment Module**: Connects to Razorpay for transaction processing.
-
----
-
 ## ⚙️ Getting Started
 
 ### Prerequisites
